@@ -382,3 +382,13 @@ Switchery.prototype.disable = function() {
   this.switcher.style.opacity = this.options.disabledOpacity;
   this.destroy();
 };
+
+/**
+ * Change checked status from element
+ *
+ * @api public
+ * @param checked
+ */
+Switchery.prototype.changeChecked = function(checked) {
+  this.element.checked = checked;
+};
