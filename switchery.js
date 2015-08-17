@@ -389,6 +389,16 @@ Switchery.prototype.disable = function() {
  * @api public
  * @param checked
  */
-Switchery.prototype.changeChecked = function(checked) {
-  this.element.checked = checked;
+Switchery.prototype.markAsChecked = function() {
+  this.setPosition(true);
+};
+
+/**
+ * Change checked status from element
+ *
+ * @api public
+ */
+Switchery.prototype.markAsUnchecked = function() {
+  this.element.checked = false;
+  this.setPosition(false);
 };

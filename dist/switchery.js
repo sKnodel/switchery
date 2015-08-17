@@ -1943,6 +1943,26 @@ Switchery.prototype.disable = function() {
   this.destroy();
 };
 
+/**
+ * Change checked status from element
+ *
+ * @api public
+ * @param checked
+ */
+Switchery.prototype.markAsChecked = function() {
+	this.setPosition(true);
+};
+
+/**
+ * Change checked status from element
+ *
+ * @api public
+ */
+Switchery.prototype.markAsUnchecked = function() {
+	this.element.checked = false;
+	this.setPosition(false);
+};
+
 });
 
 if (typeof exports == "object") {
